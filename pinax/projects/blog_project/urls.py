@@ -27,9 +27,3 @@ urlpatterns = patterns("",
     url(r"^feed/$", "biblion.views.blog_feed", name="blog_feed_combined"),
     url(r"^feed/(?P<section>[-\w]+)/$", "biblion.views.blog_feed", name="blog_feed"),
 )
-
-
-if settings.SERVE_MEDIA:
-    urlpatterns += patterns("",
-        url(r"", include("staticfiles.urls")),
-    )

@@ -83,9 +83,8 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_FINDERS = [
-    "staticfiles.finders.FileSystemFinder",
-    "staticfiles.finders.AppDirectoriesFinder",
-    "staticfiles.finders.LegacyAppDirectoriesFinder",
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     "compressor.finders.CompressorFinder",
 ]
 
@@ -131,12 +130,9 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
+    'django.core.context_processors.static',
     "django.contrib.messages.context_processors.messages",
-    
-    "staticfiles.context_processors.static",
-    
     "pinax.core.context_processors.pinax_settings",
-    
     "pinax.apps.account.context_processors.account",
 ]
 
