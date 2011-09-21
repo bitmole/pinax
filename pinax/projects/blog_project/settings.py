@@ -149,7 +149,6 @@ INSTALLED_APPS = [
     "pinax.templatetags",
     
     # external
-    "staticfiles",
     "compressor",
     "debug_toolbar",
     "mailer",
